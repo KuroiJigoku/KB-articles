@@ -23,7 +23,7 @@ If you've outgrown your free server, purchasing a premium plan is the way to go.
 
 - **More RAM and CPU** to handle more players and heavier workloads
 - **Access to more games and applications** beyond Minecraft and Hytale
-- **A dedicated server** that's fully yours to configure
+- **More customization options** to configure your server however you like
 
 {: .info}
 > For a full walkthrough of the checkout process, see [How To Purchase a Premium Server](falix/account/billing/purchasing-server).
