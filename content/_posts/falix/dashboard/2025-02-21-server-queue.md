@@ -25,7 +25,7 @@ Once your server enters the queue, the system automatically retries starting it 
 If you'd rather not wait, there are two ways to jump ahead:
 
 - **Premium plan** -- premium servers skip the queue entirely. Every time you click Start, your server boots immediately regardless of how busy the node is.
-- **Watch an ad** -- on the free plan, a **Watch Ad**{: .blue } button appears during the queue. Watch a short ad and your server will start right away.
+- **Watch an ad** -- on the free plan, a **Watch Ad**{: .blue } button may appear during the queue if an ad is available to serve. Watch a short ad and your server will start right away.
 
 ## Free vs Premium
 
