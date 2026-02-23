@@ -10,6 +10,8 @@ keywords:
       matches: ["free", "server", "resources", "improve"]
     - keyword: free
       matches: ["upgrade", "server", "better", "more"]
+    - keyword: falixcoins
+      matches: ["coins", "currency", "free", "upgrade"]
 author: Lily
 ---
 
