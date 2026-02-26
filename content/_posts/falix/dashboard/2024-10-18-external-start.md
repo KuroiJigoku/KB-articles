@@ -1,8 +1,8 @@
 ---
-title: How To Start Your Server Externally
+title: External Start and Offline MOTD
 tags: Automation
 permalink: falix/dashboard/automation/external-start
-description: Use the external start feature to turn on your server without accessing the console.
+description: Use the external start feature to turn on your server without accessing the console, and learn about the offline MOTD.
 keywords:
     - keyword: turn on
       matches: &start_matches ["without", "external", "friend", "friends"]
@@ -46,3 +46,11 @@ The external start feature is a great way to allow players or users to start you
 
 > You may have to wait a few minutes for the server to finish starting.
 
+## Offline MOTD
+
+While your server is offline, its MOTD (Message of the Day) is automatically replaced with a message that looks like this:
+
+> This server is OFFLINE!
+> Start the server at FalixNodes.net/start
+
+This lets anyone who pings your server in their server list know that it can be started remotely. The offline MOTD is always shown while the server is off — disabling the external start feature will not remove it. Once your server starts up, the MOTD returns to whatever you have set in your server properties.
