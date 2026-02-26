@@ -212,6 +212,9 @@ A **Verify DNS** button checks whether your domain is resolving correctly and re
 
 The connection modal also includes a **Remote Startup** section at the bottom, where you can create a public link that allows friends to start your server remotely even when you are not online.
 
+{: .info}
+> While your server is offline, the MOTD will always show a "start the server at FalixNodes.net/start" message. This is displayed regardless of whether remote startup is enabled or disabled.
+
 {: .warning}
 > If your server is Java-only, the Bedrock tab will show a warning suggesting you install Geyser to enable cross-play. If it is Bedrock-only, the Java tab shows a corresponding note.
 
