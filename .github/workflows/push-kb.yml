@@ -1,23 +1,26 @@
 name: Push-to-KB
-
 on:
-    push:
-        branches: [main]
-
+  push:
+    branches: [main]
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        container: ubuntu
-        steps:
-            - uses: actions/checkout@v2
-            - name: Pushes to another repository
-              uses: cpina/github-action-push-to-another-repository@55306faa4ed53b815ae49e564af8cfb359d32ae2
-              env:
-                  SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-              with:
-                  source-directory: "content"
-                  destination-github-username: "FalixNodes-Software"
-                  destination-repository-name: "Knowledge-base"
-                  target-branch: main
-                  commit-message: ORIGIN_COMMIT
-                  target-directory: "content"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Forgejo
+        run: |
+          git clone https://deploy-bot:${{ secrets.FALIX_GIT_TOKEN }}@git.falixnodes.net/falix-private/knowledge-base.git kb-repo
+          
+          # Sync content directory
+          rm -rf kb-repo/content
+          cp -r content kb-repo/content
+          
+          cd kb-repo
+          git config user.name "Deploy Bot"
+          git config user.email "deploy@falixnodes.net"
+          git add .
+          git commit -m "Update from ${{ github.sha }}" || exit 0
+          git push origin main
